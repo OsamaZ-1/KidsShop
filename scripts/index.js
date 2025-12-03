@@ -50,6 +50,7 @@ function renderProducts(products) {
             loading="lazy"
             src="${product.image}"
             alt="${product.name}"
+            onclick="openImageModal(this.src)"
             />
         </div>
 
@@ -172,6 +173,23 @@ function scrollToElement(id, offset = 0) {
     });
   }
 }
+
+// Open Larger item image
+function openImageModal(imgSrc) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+
+  modalImg.src = imgSrc;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
 
 // Scroll Filter Buttons with mouse
 const slider = document.getElementById("chips-scroll");
