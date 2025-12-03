@@ -388,4 +388,3 @@ window.addEventListener("popstate", () => {
     netlifyIdentity.logout();
   }
 });
-
