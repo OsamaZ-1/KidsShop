@@ -122,7 +122,7 @@ function filterCategories(category, event) {
     lastLoadedIndex = 0;
 
     // Filter products
-    if (category === "All Toys") {
+    if (category === "All") {
         displayedProducts = allProducts;
     } else {
         displayedProducts = allProducts.filter(p => p.category === category);
