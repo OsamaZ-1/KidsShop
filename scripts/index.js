@@ -61,7 +61,8 @@ function renderProducts(products) {
 
             <!-- Category / Price (just enough space) -->
             <div class="text-sm text-text-light/70 dark:text-text-dark/70 flex flex-col gap-1 flex-none">
-            <p class="truncate">Category: ${product.category}</p>
+            <p class="truncate">Category:</p>
+            <p>${product.category}</p>
             <p class="font-bold text-base text-text-light dark:text-text-dark">${product.price}</p>
             </div>
 
