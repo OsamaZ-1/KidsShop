@@ -222,17 +222,17 @@ const table = new Tabulator("#productTable", {
             headerFilterParams: {
                 values: {
                     "": "All",
-                    "Baby (0–2) - Boys": "Baby (0–2) - Boys",
-                    "Baby (0–2) - Girls": "Baby (0–2) - Girls",
-                    "Kids (3–5) - Boys": "Kids (3–5) - Boys",
-                    "Kids (3–5) - Girls": "Kids (3–5) - Girls",
-                    "Kids (6–8) - Boys": "Kids (6–8) - Boys",
-                    "Kids (6–8) - Girls": "Kids (6–8) - Girls",
-                    "Kids (9–12) - Boys": "Kids (9–12) - Boys",
-                    "Kids (9–12) - Girls": "Kids (9–12) - Girls",
-                    "Teens (13+) - Boys": "Teens (13+) - Boys",
-                    "Teens (13+) - Girls": "Teens (13+) - Girls",
-                    "Unisex - All Ages": "Unisex - All Ages"
+                    "Offers": "Offers",
+                    "Baby & kids accessories": "Baby & kids accessories",
+                    "Toys for boys": "Toys for boys",
+                    "Toys for girls": "Toys for girls",
+                    "Educational toys": "Educational toys",
+                    "Wooden Toys": "Wooden Toys",
+                    "Electric cars and scooter": "Electric cars and scooter",
+                    "Bikes": "Bikes",
+                    "Beds": "Beds",
+                    "Strollers & Walkers": "Strollers & Walkers",
+                    "High chairs & Car seats": "High chairs & Car seats"
                 }
             }
         },
