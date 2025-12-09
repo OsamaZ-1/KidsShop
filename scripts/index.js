@@ -43,34 +43,38 @@ function renderProducts(products) {
 
     card.innerHTML = `
       <div class="flex flex-col h-full bg-white rounded-lg shadow overflow-hidden group">
-        <!-- Image (at least half the card) -->
-        <div class="w-full flex-[1_1_50%] bg-center bg-no-repeat bg-cover overflow-hidden">
+
+        <!-- Fixed Image Height -->
+        <div class="w-full aspect-square overflow-hidden">
             <img
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-            src="${product.image}"
-            alt="${product.name}"
-            onclick="openImageModal(this.src)"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                src="${product.image}"
+                alt="${product.name}"
+                onclick="openImageModal(this.src)"
             />
         </div>
 
         <!-- Info + Title -->
         <div class="flex flex-col flex-[1_1_auto] p-2">
-            <!-- Title (takes most space) -->
-            <p class="text-lg font-bold mb-2 overflow-hidden flex-grow">${product.name}</p>
 
-            <!-- Category / Price (just enough space) -->
+            <!-- Title (flex-grow keeps bottom aligned) -->
+            <p class="text-lg font-bold mb-2 overflow-hidden flex-grow">
+                ${product.name}
+            </p>
+
+            <!-- Category / Price (fixed height, no shrinking) -->
             <div class="text-sm text-text-light/70 dark:text-text-dark/70 flex flex-col gap-1 flex-none">
-            <p class="truncate">Category:</p>
-            <p>${product.category}</p>
-            <p class="font-bold text-base text-text-light dark:text-text-dark">${product.price}</p>
+                <p class="truncate">Category:</p>
+                <p>${product.category}</p>
+                <p class="font-bold text-base text-text-light dark:text-text-dark">${product.price}</p>
             </div>
 
+            <!-- WhatsApp Button (fixed position) -->
             <button
-                class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white hover:opacity-90 transition-opacity"
+                class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white hover:opacity-90 transition-opacity flex-none"
                 onclick="openWhatsApp('Hi Kids Shop! I want this toy: ${product.name}')"
-                >
-                <!-- Full WhatsApp Logo -->
+            >
                 Order on &nbsp;&nbsp;&nbsp;
                 <svg
                     class="w-6 h-6"
@@ -83,9 +87,9 @@ function renderProducts(products) {
                 </svg>
             </button>
 
-
         </div>
     </div>
+
     `;
 
     grid.appendChild(card);
