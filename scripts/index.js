@@ -53,7 +53,7 @@ function renderProducts(products) {
                 alt="${product.name}"
                 onclick="openImageModal(this.src)"
                 onerror="
-                  if(!this.retries) this.retries = 5;  // store retries on element
+                  if(!this.retries) this.retries = 7;  // store retries on element
                   if(this.retries-- > 0) {
                       setTimeout(() => { this.src='${product.image}'; }, 5000);
                   }
