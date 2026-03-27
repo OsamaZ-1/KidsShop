@@ -79,7 +79,7 @@ function renderProducts(products) {
             <!-- WhatsApp Button (fixed position) -->
             <button
                 class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white hover:opacity-90 transition-opacity flex-none"
-                onclick="openWhatsApp('Hi Kids Shop! I want this toy: ${product.name}')"
+                onclick="openWhatsApp('Hi Kids Shop! I want this toy: ${product.name}', ${product.image})"
             >
                 Order on &nbsp;&nbsp;&nbsp;
                 <svg
@@ -160,14 +160,17 @@ function filterCategories(category, event) {
 }
 
 
-function openWhatsApp(message = "") {
+function openWhatsApp(message = "", imgUrl="") {
   const phoneNumber = "96171713383"; // WhatsApp number (no spaces or symbols)
   let url = `https://wa.me/${phoneNumber}`;
 
   // If message is provided, encode it and add to the URL
   if (message.trim() !== "") {
     const encodedMessage = encodeURIComponent(message);
-    url += `?text=${encodedMessage}`;
+    const encodedUrl = encodeURIComponent("\n\n" + imgUrl);
+    const encodedEverything = encodedMessage + encodedUrl;
+
+    url += `?text=${encodedEverything}`;
   }
 
   window.open(url, "_blank"); // Opens WhatsApp in a new tab/window

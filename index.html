@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html class="light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Kids Shop E-commerce Website</title>
-    
+
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -29,7 +29,7 @@
         window,
         document,
         "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
+        "https://connect.facebook.net/en_US/fbevents.js",
       );
       fbq("init", "1668238207474899");
       fbq("track", "PageView");
@@ -54,7 +54,11 @@
     />
     <style>
       .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
       }
       #imageModal {
         backdrop-filter: blur(4px);
@@ -227,6 +231,14 @@
                 <p class="text-sm font-medium">Wooden Toys</p>
               </div>
 
+              <!-- Outdoors -->
+              <div
+                class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-subtle-light dark:bg-subtle-dark px-4 hover:bg-subtle-light/80 dark:hover:bg-subtle-dark/80"
+                onclick="filterCategories('Outdoors', event)"
+              >
+                <p class="text-sm font-medium">Outdoors</p>
+              </div>
+
               <!-- Electric cars and scooter -->
               <div
                 class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-subtle-light dark:bg-subtle-dark px-4 hover:bg-subtle-light/80 dark:hover:bg-subtle-dark/80"
@@ -249,6 +261,22 @@
                 onclick="filterCategories('Beds', event)"
               >
                 <p class="text-sm font-medium">Beds</p>
+              </div>
+
+              <!-- Bags -->
+              <div
+                class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-subtle-light dark:bg-subtle-dark px-4 hover:bg-subtle-light/80 dark:hover:bg-subtle-dark/80"
+                onclick="filterCategories('Bags', event)"
+              >
+                <p class="text-sm font-medium">Bags</p>
+              </div>
+
+              <!-- Slides and Swings -->
+              <div
+                class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-subtle-light dark:bg-subtle-dark px-4 hover:bg-subtle-light/80 dark:hover:bg-subtle-dark/80"
+                onclick="filterCategories('Slides & Swings', event)"
+              >
+                <p class="text-sm font-medium">Slides & Swings</p>
               </div>
 
               <!-- Strollers & Walkers -->
