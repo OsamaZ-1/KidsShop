@@ -79,7 +79,7 @@ function renderProducts(products) {
             <!-- WhatsApp Button (fixed position) -->
             <button
                 class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white hover:opacity-90 transition-opacity flex-none"
-                onclick="openWhatsApp('Hi Kids Shop! I want this toy: ${product.name}', ${product.image})"
+                onclick="openWhatsApp('Hi Kids Shop! I want this toy: ${product.name}', '${product.image}')"
             >
                 Order on &nbsp;&nbsp;&nbsp;
                 <svg
