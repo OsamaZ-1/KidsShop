@@ -166,11 +166,10 @@ function openWhatsApp(message = "", imgUrl="") {
 
   // If message is provided, encode it and add to the URL
   if (message.trim() !== "") {
-    const encodedMessage = encodeURIComponent(message);
-    const encodedUrl = encodeURIComponent("\n\n" + imgUrl);
-    const encodedEverything = encodedMessage + encodedUrl;
+    const fullMsg = message + "\n\n" + imgUrl
+    const encodedFullMsg = encodeURIComponent(fullMsg);
 
-    url += `?text=${encodedEverything}`;
+    url += `?text=${encodedFullMsg}`;
   }
 
   window.open(url, "_blank"); // Opens WhatsApp in a new tab/window
