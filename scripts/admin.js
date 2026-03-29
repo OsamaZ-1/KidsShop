@@ -231,6 +231,9 @@ const table = new Tabulator("#productTable", {
                     "Electric cars and scooter": "Electric cars and scooter",
                     "Bikes": "Bikes",
                     "Beds": "Beds",
+                    "Outdoor": "Outdoor",
+                    "Bags": "Bags",
+                    "Slides and Swings": "Slides and Swings",
                     "Strollers & Walkers": "Strollers & Walkers",
                     "High chairs & Car seats": "High chairs & Car seats"
                 }
